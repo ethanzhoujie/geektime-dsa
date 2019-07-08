@@ -101,7 +101,70 @@ cal\(\) 的时间复杂度为 O\(n^2\)
 
 ![](./assets/complexitypic.png)
 
-##### 空间复杂度
+非多项式量级：O(2^n), O(n!)
+
+多项式量级：其余均为多项式量级
+
+- **O(1)**
+
+```java
+ int i = 8;
+ int j = 6;
+ int sum = i + j;
+```
+
+O(1) 不是只有一行代码，是指执行时间不随着 n 的增大而增长。
+
+一般情况下，只要算法中不存在循环语句，递归语句，即使有成千上万行的代码，其时间复杂度也是 O(1)。
+
+- **O(logn), O(nlogn)**
+
+```java
+ i=1;
+ while (i <= n)  { // 第2行和第3行代码是循环次数最多的
+   i = i * 2;      // 只要计算出第三行代码的时间复杂度就可以了
+ }
+```
+
+![logn](./assets/logn.jpg)
+
+2^x = n ---> x = log2(n) —> O(log2(n))
+
+根据对数换底公式：log2(n) * log10(2) = log10(n) = logn
+
+**所以在采用大 O 标记复杂度的时候可以忽略系数，即 O(Cf(n)) = O(f(n))**
+
+**因此在对数阶时间复杂度的表示方法里，可以忽略对数的底，统一表示为O(logn)**
+
+- **O(m+n), O(m*n)**
+
+```java
+int cal(int m, int n) {
+  int sum_1 = 0;
+  int i = 1;
+  for (; i < m; ++i) {
+    sum_1 = sum_1 + i;
+  }
+
+  int sum_2 = 0;
+  int j = 1;
+  for (; j < n; ++j) {
+    sum_2 = sum_2 + j;
+  }
+
+  return sum_1 + sum_2;
+}
+```
+
+代码的复杂度由两个数据的估摸来决定
+
+![complexity-graph](./assets/complexity-graph.jpg)
+
+##### 空间复杂度分析
+
+空间复杂度全称为渐进式空间复杂度(asymtotic space complexity)，表示算法的存储空间与数据规模之间的增长关系。
+
+
 
 
 
