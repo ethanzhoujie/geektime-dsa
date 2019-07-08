@@ -162,7 +162,7 @@ int cal(int m, int n) {
 
 ##### 空间复杂度分析
 
-空间复杂度全称为渐进式空间复杂度(asymtotic space complexity)，表示算法的存储空间与数据规模之间的增长关系。
+空间复杂度全称为渐进式空间复杂度(asymptotic space complexity)，表示算法的存储空间与数据规模之间的增长关系。
 
 
 
